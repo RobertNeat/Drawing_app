@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+    <!--animacja cyan-->
+    <Transition
+        android:id="@+id/cyan_animation"
+        motion:constraintSetEnd="@+id/cyan_end"
+        motion:constraintSetStart="@id/cyan_start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/cyanButton"
+               motion:framePosition="100"
+               android:scaleX="1.2" />
+           <KeyPosition
+               motion:motionTarget="@+id/cyanButton"
+               motion:framePosition="50"
+               motion:keyPositionType="pathRelative"
+               motion:percentY="-4" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/cyan_start">
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/cyan_end">
+        <Constraint
+            android:id="@+id/cyanButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/magentaButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/magentaButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/cyanButton"
+            motion:layout_constraintEnd_toStartOf="@+id/yellowButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/yellowButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/magentaButton"
+            motion:layout_constraintEnd_toStartOf="@+id/clearButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/clearButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/yellowButton"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+
+
+    <!--animacja magenta-->
+    <Transition
+        android:id="@+id/magenta_animation"
+        motion:constraintSetStart="@id/magenta_start"
+        motion:constraintSetEnd="@+id/magenta_end"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/magentaButton"
+                motion:framePosition="100"
+                android:scaleX="1.2" />
+            <KeyPosition
+                motion:motionTarget="@+id/magentaButton"
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:percentY="-10" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/magenta_start">
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/magenta_end">
+        <Constraint
+            android:id="@+id/cyanButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/magentaButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/magentaButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/cyanButton"
+            motion:layout_constraintEnd_toStartOf="@+id/yellowButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/yellowButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/magentaButton"
+            motion:layout_constraintEnd_toStartOf="@+id/clearButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/clearButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/yellowButton"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+
+
+    <!--animacja yellow-->
+    <Transition
+        android:id="@+id/yellow_animation"
+        motion:constraintSetStart="@id/yellow_start"
+        motion:constraintSetEnd="@+id/yellow_end"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/yellowButton"
+                motion:framePosition="100"
+                android:scaleX="1.2" />
+            <KeyPosition
+                motion:motionTarget="@+id/yellowButton"
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:percentY="10" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/yellow_start">
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/yellow_end">
+        <Constraint
+            android:id="@+id/cyanButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/magentaButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/magentaButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/cyanButton"
+            motion:layout_constraintEnd_toStartOf="@+id/yellowButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/yellowButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/magentaButton"
+            motion:layout_constraintEnd_toStartOf="@+id/clearButton"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/clearButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintStart_toEndOf="@+id/yellowButton"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+
+
+    <!--animacja wyczyszczenia - zmniejsza przycisk czyszczenia i równa resztę-->
+    <Transition
+        android:id="@+id/clear_animation"
+        motion:constraintSetStart="@+id/clear_start"
+        motion:constraintSetEnd="@+id/clear_end"
+        motion:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/cyanButton"
+                motion:framePosition="100"
+                android:scaleX="1" />
+            <KeyAttribute
+                motion:motionTarget="@+id/magentaButton"
+                motion:framePosition="100"
+                android:scaleX="1" />
+            <KeyAttribute
+                motion:motionTarget="@+id/yellowButton"
+                motion:framePosition="100"
+                android:scaleX="1" />
+            <KeyAttribute
+                motion:motionTarget="@+id/clearButton"
+                motion:framePosition="100"
+                android:scaleX="1" />
+            <KeyPosition
+                motion:motionTarget="@+id/clearButton"
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:percentX="0.5"
+                motion:percentY="0.5" />
+            <KeyAttribute
+                motion:motionTarget="@+id/clearButton"
+                motion:framePosition="50"
+                android:scaleX="2" />
+            <KeyAttribute
+                motion:motionTarget="@+id/clearButton"
+                motion:framePosition="50"
+                android:scaleY="2" />
+        </KeyFrameSet>
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/clear_start">
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/clear_end">
+        <Constraint
+            android:id="@+id/cyanButton"
+            motion:layout_constraintEnd_toStartOf="@+id/magentaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/magentaButton"
+            motion:layout_constraintStart_toEndOf="@+id/cyanButton"
+            motion:layout_constraintEnd_toStartOf="@+id/yellowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+            android:id="@+id/yellowButton"
+            motion:layout_constraintStart_toEndOf="@+id/magentaButton"
+            motion:layout_constraintEnd_toStartOf="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/clearButton"
+            motion:layout_constraintStart_toEndOf="@+id/yellowButton"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+    </ConstraintSet>
+
+
+</MotionScene>
